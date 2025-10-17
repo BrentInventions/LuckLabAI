@@ -1,44 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LuckLab AI Bot Predictor</title>
+    <meta charset="utf-8">
+    <title>LuckLab AI Bot Predictor - Advanced Sports Predictions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Sports Predictions, LuckLab AI Bot Predictor, Sports Betting, Advanced Analytics, Sports Science, AI Bot" name="keywords">
+    <meta content="Get winning sports predictions from our advanced AI Bot Predictor. Join thousands of satisfied customers who trust LuckLab AI Bot Predictor - Where Science Meets Sports." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- LuckLab Picks CSS -->
+    <link href="css/lucklab-picks.css" rel="stylesheet">
+    
     <style>
-        body { 
-            font-family: Arial; 
-            background: #1a1a1a; 
-            color: #00ff88; 
-            text-align: center; 
-            padding: 50px; 
-            margin: 0;
+        .redirect-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #00ff88;
+            text-align: center;
+            padding: 50px;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .box { 
-            background: #2a2a2a; 
-            border: 2px solid #00ff88; 
-            border-radius: 10px; 
-            padding: 30px; 
+        .redirect-box { 
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border: 3px solid #00ff88; 
+            border-radius: 20px; 
+            padding: 40px; 
             margin: 20px auto; 
-            max-width: 600px; 
+            max-width: 600px;
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.3);
         }
-        a { color: #00ff88; text-decoration: none; font-weight: bold; }
-        a:hover { color: #ff6b35; }
-        .status { margin: 20px 0; }
-        .success { color: #00ff88; }
-        .warning { color: #ff6b35; }
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+        .status { margin: 30px 0; }
+        .success { color: #00ff88; font-size: 1.2rem; font-weight: bold; }
+        .warning { color: #ff6b35; font-size: 1.1rem; }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #00ff88, #00cc6a);
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 255, 136, 0.6);
+            color: #000;
+        }
+        .info {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+        .spinner {
+            border: 3px solid #333;
+            border-top: 3px solid #00ff88;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>🎯 LuckLab AI Bot Predictor</h1>
-        <div class="status">
-            <p class="success">✅ Website is working!</p>
-            <p class="warning">🔧 Backend is offline - Start your backend to enable full functionality!</p>
-        </div>
-        <a href="insightai-index.html">🚀 Go to Full Website</a>
-        
-        <div style="margin-top: 30px; font-size: 14px; color: #ccc;">
-            <p>Backend IP: 192.168.1.102:5002</p>
-            <p>Start your backend with: START-EVERYTHING.bat</p>
+    <div class="redirect-overlay">
+        <div class="redirect-box">
+            <div class="logo">🎯 LuckLab AI</div>
+            <h1>AI Bot Predictor</h1>
+            
+            <div class="status">
+                <p class="success">✅ Website is working!</p>
+                <p class="warning">🔧 System is offline - Start LuckLab Control Center to enable full functionality!</p>
+            </div>
+            
+            <div class="spinner"></div>
+            <p>Loading full website...</p>
+            
+            <a href="insightai-index.html" class="btn">🚀 Go to Full Website</a>
+            
+            <div class="info">
+                <p><strong>Backend IP:</strong> 192.168.1.102:5002</p>
+                <p><strong>Start system with:</strong> START-EVERYTHING.bat</p>
+                <p><strong>Or run:</strong> LuckLab Control Center</p>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Auto-redirect after 3 seconds
+        setTimeout(function() {
+            window.location.href = 'insightai-index.html';
+        }, 3000);
+        
+        console.log('🎯 LuckLab AI Bot Predictor - Loading full website...');
+    </script>
 </body>
 </html>
