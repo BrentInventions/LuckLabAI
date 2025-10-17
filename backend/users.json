@@ -1,0 +1,56 @@
+[
+  {
+    "id": "test@lucklab.com",
+    "username": "Test User",
+    "email": "test@lucklab.com",
+    "membership": "gold",
+    "picks_per_day": 10,
+    "picks_used_today": 0,
+    "last_pick_date": "2025-10-17",
+    "created_at": "2025-10-17T13:16:17.420752",
+    "updated_at": "2025-10-17T13:44:09.079557",
+    "notes": "Test account for development",
+    "granted_by": "admin",
+    "profile": {
+      "bio": "",
+      "profile_pic": "https://ui-avatars.com/api/?name=Test User&size=200&background=00ff88&color=000&bold=true",
+      "location": "",
+      "favorite_sport": "NFL",
+      "favorite_team": "",
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_streak": 0,
+      "total_profit": 0,
+      "telegram_chat": "https://t.me/lucklab_ai"
+    },
+    "parlay_limit_per_day": 25
+  },
+  {
+    "id": "user_1760725197_1c96599f903cf1e9",
+    "username": "testuser",
+    "email": "test@example.com",
+    "password_hash": "9636c365f19e92848e7ae05e8c3c5787:241af7529e99e33a76ab8ff837767c92a553013b2f68033a85748de54c9dbd50",
+    "membership": "free",
+    "picks_per_day": 0,
+    "parlay_limit_per_day": 1,
+    "picks_used_today": 0,
+    "last_pick_date": null,
+    "created_at": "2025-10-17T14:19:57.681574",
+    "updated_at": "2025-10-17T14:20:02.729354",
+    "session_token": "B4iEcc_2abf4BtUoULLJHgeaBe-kB16nbwf23kTQCVQ",
+    "is_active": true,
+    "profile": {
+      "bio": "",
+      "profile_pic": "https://ui-avatars.com/api/?name=testuser&size=200&background=00ff88&color=000&bold=true",
+      "location": "",
+      "favorite_sport": "NFL",
+      "favorite_team": "",
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_streak": 0,
+      "total_profit": 0,
+      "telegram_chat": "https://t.me/lucklab_ai"
+    },
+    "last_login": "2025-10-17T14:20:02.729344"
+  }
+]

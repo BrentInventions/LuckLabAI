@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ALERT_1760722061_0",
+    "type": "pick_request",
+    "title": "New Parlay Request",
+    "message": "Test User (gold) requested parlay for NFL_NBA",
+    "user_id": "test@lucklab.com",
+    "username": "Test User",
+    "request_id": "REQ_1760722061_0",
+    "timestamp": "2025-10-17T13:27:41.447998",
+    "read": false
+  },
+  {
+    "id": "ALERT_1760722296_1",
+    "type": "pick_request",
+    "title": "New Parlay Request",
+    "message": "Test User (gold) requested parlay for NFL_NBA",
+    "user_id": "test@lucklab.com",
+    "username": "Test User",
+    "request_id": "REQ_1760722296_0",
+    "timestamp": "2025-10-17T13:31:36.759157",
+    "read": false
+  },
+  {
+    "id": "ALERT_1760722729_2",
+    "type": "pick_request",
+    "title": "New Parlay Request",
+    "message": "Test User (gold) requested parlay for NFL",
+    "user_id": "test@lucklab.com",
+    "username": "Test User",
+    "request_id": "REQ_1760722729_1",
+    "timestamp": "2025-10-17T13:38:49.775448",
+    "read": false
+  },
+  {
+    "id": "ALERT_1760722741_3",
+    "type": "pick_request",
+    "title": "New Parlay Request",
+    "message": "Test User (gold) requested parlay for NBA",
+    "user_id": "test@lucklab.com",
+    "username": "Test User",
+    "request_id": "REQ_1760722741_2",
+    "timestamp": "2025-10-17T13:39:01.613846",
+    "read": false
+  },
+  {
+    "id": "ALERT_1760723056_4",
+    "type": "pick_request",
+    "title": "New Parlay Request",
+    "message": "Test User (gold) requested parlay for NFL_NBA",
+    "user_id": "test@lucklab.com",
+    "username": "Test User",
+    "request_id": "REQ_1760723056_3",
+    "timestamp": "2025-10-17T13:44:16.391941",
+    "read": false
+  },
+  {
+    "id": "ALERT_1760723185_5",
+    "type": "pick_request",
+    "title": "New Parlay Request",
+    "message": "Test User (gold) requested parlay for NFL_NBA_MLB",
+    "user_id": "test@lucklab.com",
+    "username": "Test User",
+    "request_id": "REQ_1760723185_4",
+    "timestamp": "2025-10-17T13:46:25.052332",
+    "read": false
+  },
+  {
+    "id": "ALERT_1760723724_6",
+    "type": "pick_request",
+    "title": "New Parlay Request",
+    "message": "Test User (gold) requested parlay for NFL",
+    "user_id": "test@lucklab.com",
+    "username": "Test User",
+    "request_id": "REQ_1760723724_5",
+    "timestamp": "2025-10-17T13:55:24.915046",
+    "read": false
+  },
+  {
+    "id": "ALERT_1760724541_7",
+    "type": "pick_request",
+    "title": "New Parlay Request",
+    "message": "Test User (gold) requested parlay for NFL_NBA_MLB",
+    "user_id": "test@lucklab.com",
+    "username": "Test User",
+    "request_id": "REQ_1760724541_6",
+    "timestamp": "2025-10-17T14:09:01.804051",
+    "read": false
+  }
+]
