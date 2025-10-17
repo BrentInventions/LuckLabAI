@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LuckLab Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #00ff88;
+            text-align: center;
+            padding: 50px;
+        }
+        .test-box {
+            background: #2a2a2a;
+            border: 2px solid #00ff88;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .success {
+            color: #00ff88;
+        }
+        .error {
+            color: #ff6b35;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        <h1>🎯 LuckLab Test Page</h1>
+        <p class="success">✅ Website is working!</p>
+        <p>This is a simple test to verify your deployment is working.</p>
+        
+        <h2>📁 File Structure Test:</h2>
+        <div id="file-test">
+            <p>Testing file access...</p>
+        </div>
+        
+        <h2>🔧 Backend Test:</h2>
+        <div id="backend-test">
+            <p>Testing backend connection...</p>
+        </div>
+    </div>
+
+    <script>
+        console.log('🚀 LuckLab Test Page Loaded');
+        
+        // Test file access
+        async function testFiles() {
+            const fileTest = document.getElementById('file-test');
+            
+            try {
+                // Test CSS files
+                const cssResponse = await fetch('css/style.css');
+                if (cssResponse.ok) {
+                    fileTest.innerHTML += '<p class="success">✅ CSS files accessible</p>';
+                } else {
+                    fileTest.innerHTML += '<p class="error">❌ CSS files not found</p>';
+                }
+            } catch (error) {
+                fileTest.innerHTML += '<p class="error">❌ CSS files error: ' + error.message + '</p>';
+            }
+            
+            try {
+                // Test JSON files
+                const jsonResponse = await fetch('lucklab_picks.json');
+                if (jsonResponse.ok) {
+                    fileTest.innerHTML += '<p class="success">✅ JSON files accessible</p>';
+                } else {
+                    fileTest.innerHTML += '<p class="error">❌ JSON files not found</p>';
+                }
+            } catch (error) {
+                fileTest.innerHTML += '<p class="error">❌ JSON files error: ' + error.message + '</p>';
+            }
+        }
+        
+        // Test backend
+        async function testBackend() {
+            const backendTest = document.getElementById('backend-test');
+            
+            try {
+                const response = await fetch('http://192.168.1.102:5002/api/health', {
+                    timeout: 3000
+                });
+                
+                if (response.ok) {
+                    backendTest.innerHTML = '<p class="success">✅ Backend is online</p>';
+                } else {
+                    backendTest.innerHTML = '<p class="error">❌ Backend returned error</p>';
+                }
+            } catch (error) {
+                backendTest.innerHTML = '<p class="error">❌ Backend is offline: ' + error.message + '</p>';
+            }
+        }
+        
+        // Run tests
+        document.addEventListener('DOMContentLoaded', function() {
+            testFiles();
+            testBackend();
+        });
+    </script>
+</body>
+</html>

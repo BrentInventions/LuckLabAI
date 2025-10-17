@@ -1,206 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Picks - AI-Powered Sports Predictions</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>LuckLab AI Bot Predictor</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            background: #1a1a1a; 
+            color: #00ff88; 
+            text-align: center; 
+            padding: 50px; 
+            margin: 0;
+        }
+        .box { 
+            background: #2a2a2a; 
+            border: 2px solid #00ff88; 
+            border-radius: 10px; 
+            padding: 30px; 
+            margin: 20px auto; 
+            max-width: 600px; 
+        }
+        a { color: #00ff88; text-decoration: none; font-weight: bold; }
+        a:hover { color: #ff6b35; }
+        .status { margin: 20px 0; }
+        .success { color: #00ff88; }
+        .warning { color: #ff6b35; }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-robot"></i>
-                <span>Bot Picks</span>
-            </div>
-            <div class="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#picks" class="nav-link">Available Picks</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button class="btn-primary" onclick="openAdminPanel()">Admin Panel</button>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <div class="box">
+        <h1>🎯 LuckLab AI Bot Predictor</h1>
+        <div class="status">
+            <p class="success">✅ Website is working!</p>
+            <p class="warning">🔧 Backend is offline - Start your backend to enable full functionality!</p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>AI-Powered Sports Predictions</h1>
-            <p>Get winning picks from our advanced sports prediction bot. Join thousands of satisfied customers who trust Bot Picks for their sports betting success.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">87%</span>
-                    <span class="stat-label">Win Rate</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">2,500+</span>
-                    <span class="stat-label">Happy Customers</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">$2.3M</span>
-                    <span class="stat-label">Winnings Generated</span>
-                </div>
-            </div>
-            <button class="btn-primary btn-large" onclick="scrollToPicks()">View Available Picks</button>
-        </div>
-    </section>
-
-    <!-- Available Picks Section -->
-    <section id="picks" class="picks-section">
-        <div class="container">
-            <h2>Available Bot Picks</h2>
-            <div class="picks-grid" id="picksGrid">
-                <!-- Picks will be loaded dynamically -->
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Why Choose Bot Picks?</h2>
-                    <p>Our advanced AI algorithm analyzes thousands of data points including team performance, player statistics, weather conditions, and historical trends to provide you with the most accurate sports predictions.</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Advanced AI Analysis</li>
-                        <li><i class="fas fa-check"></i> Real-time Data Processing</li>
-                        <li><i class="fas fa-check"></i> Multiple Sports Coverage</li>
-                        <li><i class="fas fa-check"></i> Instant Pick Delivery</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>support@botpicks.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>1-800-BOT-PICKS</span>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-robot"></i>
-                    <span>Bot Picks</span>
-                </div>
-                <p>&copy; 2024 Bot Picks. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Admin Panel Modal -->
-    <div id="adminModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Admin Panel</h2>
-                <span class="close" onclick="closeAdminPanel()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="admin-tabs">
-                    <button class="tab-btn active" onclick="showTab('add-pick')">Add New Pick</button>
-                    <button class="tab-btn" onclick="showTab('manage-picks')">Manage Picks</button>
-                    <button class="tab-btn" onclick="showTab('view-sales')">View Sales</button>
-                </div>
-                
-                <div id="add-pick" class="tab-content active">
-                    <form id="addPickForm">
-                        <input type="text" id="pickTitle" placeholder="Pick Title" required>
-                        <select id="pickSport" required>
-                            <option value="">Select Sport</option>
-                            <option value="NFL">NFL</option>
-                            <option value="NBA">NBA</option>
-                            <option value="MLB">MLB</option>
-                            <option value="NHL">NHL</option>
-                            <option value="Soccer">Soccer</option>
-                        </select>
-                        <input type="text" id="pickTeams" placeholder="Team vs Team" required>
-                        <input type="number" id="pickPrice" placeholder="Price ($)" min="1" required>
-                        <textarea id="pickDescription" placeholder="Pick Description" rows="4" required></textarea>
-                        <input type="text" id="pickPrediction" placeholder="Bot's Prediction" required>
-                        <input type="datetime-local" id="pickDate" required>
-                        <button type="submit" class="btn-primary">Add Pick</button>
-                    </form>
-                </div>
-                
-                <div id="manage-picks" class="tab-content">
-                    <div id="picksList">
-                        <!-- Picks will be loaded here -->
-                    </div>
-                </div>
-                
-                <div id="view-sales" class="tab-content">
-                    <div id="salesList">
-                        <!-- Sales will be loaded here -->
-                    </div>
-                </div>
-            </div>
+        <a href="insightai-index.html">🚀 Go to Full Website</a>
+        
+        <div style="margin-top: 30px; font-size: 14px; color: #ccc;">
+            <p>Backend IP: 192.168.1.102:5002</p>
+            <p>Start your backend with: START-EVERYTHING.bat</p>
         </div>
     </div>
-
-    <!-- Purchase Modal -->
-    <div id="purchaseModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Purchase Pick</h2>
-                <span class="close" onclick="closePurchaseModal()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div id="purchaseContent">
-                    <!-- Purchase form will be loaded here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Customer Dashboard Modal -->
-    <div id="dashboardModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>My Purchased Picks</h2>
-                <span class="close" onclick="closeDashboard()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div id="dashboardContent">
-                    <!-- Customer's purchased picks will be loaded here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
