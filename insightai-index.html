@@ -645,7 +645,7 @@
                         <button type="button" class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown">My Account</button>
                         <div class="dropdown-menu dropdown-menu-right bg-dark">
                             <button class="dropdown-item text-light" type="button" onclick="showCustomerDashboard()">My Picks</button>
-                            <button class="dropdown-item text-light" type="button" onclick="openAdminPanel()">Admin Panel</button>
+                            <!-- Admin Panel hidden for public -->
                         </div>
                     </div>
                     <div class="btn-group mx-2">
@@ -670,10 +670,7 @@
                         <i class="fas fa-user text-dark"></i>
                         <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
                     </a>
-                    <a href="#" class="btn px-0 ml-2" onclick="openAdminPanel()">
-                        <i class="fas fa-cog text-dark"></i>
-                        <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
-                    </a>
+                    <!-- Admin settings hidden for public -->
                     <a href="#" class="btn px-0 ml-2" onclick="showTelegramLogin()">
                         <i class="fab fa-telegram text-primary"></i>
                     </a>
@@ -762,10 +759,7 @@
                             <a href="#contact" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
-                            <a href="#" class="btn btn-primary px-3 mr-2" onclick="openAdminPanel()" style="color: white !important;">
-                                <i class="fas fa-cog mr-1"></i>
-                                Admin Panel
-                            </a>
+                            <!-- Admin Panel hidden for public -->
                             <a href="#" class="btn px-0" onclick="showCustomerDashboard()">
                                 <i class="fas fa-user text-primary"></i>
                                 <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
@@ -1895,7 +1889,7 @@
                         <h5 class="text-secondary text-uppercase mb-4">My Account</h5>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-secondary mb-2" href="#" onclick="showCustomerDashboard()"><i class="fa fa-angle-right mr-2"></i>My Picks</a>
-                            <a class="text-secondary mb-2" href="#" onclick="openAdminPanel()"><i class="fa fa-angle-right mr-2"></i>Admin Panel</a>
+                            <!-- Admin Panel hidden for public -->
                             <a class="text-secondary mb-2" href="#help"><i class="fa fa-angle-right mr-2"></i>Help</a>
                             <a class="text-secondary" href="#faqs"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
                         </div>
@@ -1940,7 +1934,7 @@
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- Admin Panel Modal -->
-    <div id="adminModal" class="modal" style="display: none;">
+    <div id="adminModal" class="modal" style="display: none !important; visibility: hidden;">
         <div class="modal-dialog modal-xl" style="max-width: 95%; height: 90vh;">
             <div class="modal-content d-flex flex-column" style="height: 90vh;">
                 <div class="modal-header bg-primary text-white">

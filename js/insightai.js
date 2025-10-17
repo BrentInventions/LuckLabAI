@@ -1976,12 +1976,9 @@ function showCustomerDashboard() {
 
 // Admin Panel Functions
 function openAdminPanel() {
-    $('#adminModal').show();
-    // Reload picks from file before showing admin panel
-    loadPicksFromFile().then(() => {
-        loadManagePicks();
-        loadViewSales();
-    });
+    // Admin panel disabled for public access
+    alert('Admin access is not available on the public website.');
+    return;
 }
 
 function closeAdminPanel() {
