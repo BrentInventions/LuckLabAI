@@ -3708,8 +3708,8 @@ async function updateStreamGames() {
         
         // Check if it's a connection error (backend not running)
         if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
-            gameSelect.innerHTML = '<option value="">Backend server not running. Please start the LuckLab AI backend.</option>';
-            showNotification('Backend server not running. Please start the LuckLab AI backend server.', 'error');
+            gameSelect.innerHTML = '<option value="">LuckLab AI service is offline. Please contact support.</option>';
+            showNotification('LuckLab AI service is currently offline. Please try again later.', 'error');
         } else {
             gameSelect.innerHTML = '<option value="">Error loading games. Try again.</option>';
             showNotification('Failed to load games. Please try again.', 'error');

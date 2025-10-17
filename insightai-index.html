@@ -3675,11 +3675,11 @@
                 };
                 
             } catch (error) {
-                selector.innerHTML = '<option>Error loading games - Make sure server is running on port 5002</option>';
+                selector.innerHTML = '<option>Error loading games - Service temporarily unavailable</option>';
                 console.error('Error loading games:', error);
                 
                 // Show helpful error message
-                alert(`Could not load games!\n\nMake sure:\n1. LuckLab AI Bot Predictor is running\n2. Server is on port 5002\n3. Try NFL which has active games\n\nError: ${error.message}`);
+                alert(`Could not load games!\n\nLuckLab AI service is temporarily unavailable. Please try again later or contact support.\n\nError: Connection failed`);
             }
         }
         
@@ -5918,7 +5918,7 @@
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('Could not connect to email server. Make sure it is running on port 5003.');
+                alert('Email verification service is temporarily unavailable. Please try again later.');
             }
         };
         
