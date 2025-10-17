@@ -3679,7 +3679,7 @@
                 console.error('Error loading games:', error);
                 
                 // Show helpful error message
-                alert(`Could not load games!\n\nMake sure:\n1. AI Bot Predictor server is running (python chatgpt_predictor.py)\n2. Server is on port 5002\n3. Try NFL which has active games\n\nError: ${error.message}`);
+                alert(`Could not load games!\n\nMake sure:\n1. LuckLab AI Bot Predictor is running\n2. Server is on port 5002\n3. Try NFL which has active games\n\nError: ${error.message}`);
             }
         }
         
@@ -3950,7 +3950,7 @@
             resultContainer.scrollIntoView({ behavior: 'smooth' });
             
             try {
-                // Call ChatGPT API for this SPECIFIC game only
+                // Call LuckLab AI API for this SPECIFIC game only
                 console.log('Sending request for:', selectedGame.name, selectedBetType);
                 
                 const response = await fetch('http://localhost:5002/api/analyze-game', {
@@ -4459,7 +4459,7 @@
                     <div class="text-center py-5">
                         <i class="fas fa-exclamation-triangle text-danger" style="font-size: 3rem;"></i>
                         <p class="mt-3 text-light">Could not connect to AI Bot Predictor</p>
-                        <small class="text-muted">Make sure to run: python backend/chatgpt_predictor.py</small>
+                        <small class="text-muted">Start LuckLab Control Center to enable AI predictions</small>
                     </div>
                 `;
             }

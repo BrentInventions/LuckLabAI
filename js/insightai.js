@@ -919,7 +919,7 @@ let customers = JSON.parse(localStorage.getItem('botCustomers')) || [];
 let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
 
 // Membership Tiers Configuration
-// Membership Plans with Duration Options (ChatGPT Optimized Pricing)
+// Membership Plans with Duration Options (AI Optimized Pricing)
 const MEMBERSHIP_PLANS = {
     bronze: {
         name: 'Bronze',
