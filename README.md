@@ -5,17 +5,16 @@
 ### Structure
 ```
 /
-├── backend/
-│   ├── chatgpt_predictor.py  # Main Flask API
-│   ├── requirements.txt       # Python dependencies
-│   └── *.json                 # Data files
-├── email_verification.py      # Email service
-└── lucklab_control_center.py # Admin GUI
+├── chatgpt_predictor.py       # Main Flask API
+├── requirements.txt            # Python dependencies
+├── *.json                      # Data files
+├── email_verification.py       # Email service
+└── lucklab_control_center.py  # Admin GUI
 ```
 
 ### Deploy to Render.com
 
-1. **Root Directory**: `backend`
+1. **Root Directory**: (leave blank)
 2. **Build Command**: `pip install -r requirements.txt`
 3. **Start Command**: `python chatgpt_predictor.py`
 
@@ -32,7 +31,6 @@ SECRET_KEY=your_secret_key_here
 
 1. Install dependencies:
 ```bash
-cd backend
 pip install -r requirements.txt
 ```
 
